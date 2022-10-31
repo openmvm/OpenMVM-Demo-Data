@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2022 at 11:25 AM
+-- Generation Time: Oct 31, 2022 at 07:23 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -313,7 +313,7 @@ INSERT INTO `length_class_description` (`length_class_description_id`, `length_c
 
 TRUNCATE TABLE `option`;
 --
--- Dumping data untuk tabel `option`
+-- Dumping data for table `option`
 --
 
 INSERT INTO `option` (`option_id`, `seller_id`, `customer_id`, `sort_order`, `status`) VALUES
@@ -331,7 +331,7 @@ INSERT INTO `option` (`option_id`, `seller_id`, `customer_id`, `sort_order`, `st
 
 TRUNCATE TABLE `option_description`;
 --
--- Dumping data untuk tabel `option_description`
+-- Dumping data for table `option_description`
 --
 
 INSERT INTO `option_description` (`option_description_id`, `option_id`, `seller_id`, `customer_id`, `language_id`, `name`) VALUES
@@ -356,7 +356,7 @@ INSERT INTO `option_description` (`option_description_id`, `option_id`, `seller_
 
 TRUNCATE TABLE `option_value`;
 --
--- Dumping data untuk tabel `option_value`
+-- Dumping data for table `option_value`
 --
 
 INSERT INTO `option_value` (`option_value_id`, `option_id`, `seller_id`, `customer_id`, `sort_order`, `status`) VALUES
@@ -399,7 +399,7 @@ INSERT INTO `option_value` (`option_value_id`, `option_id`, `seller_id`, `custom
 
 TRUNCATE TABLE `option_value_description`;
 --
--- Dumping data untuk tabel `option_value_description`
+-- Dumping data for table `option_value_description`
 --
 
 INSERT INTO `option_value_description` (`option_value_description_id`, `option_value_id`, `option_id`, `seller_id`, `customer_id`, `language_id`, `name`) VALUES
@@ -488,8 +488,8 @@ TRUNCATE TABLE `order_product`;
 --
 
 INSERT INTO `order_product` (`order_product_id`, `order_id`, `seller_id`, `product_id`, `name`, `quantity`, `price`, `option`, `option_ids`, `total`) VALUES
-(1, 1, 1, 2, 'PC #2', 1, '1250.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"14\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"8GB\"},\"2\":{\"name\":\"8GB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"22\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"1TB\"},\"2\":{\"name\":\"1TB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"18\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i5 12600K\"},\"1\":{\"name\":\"Intel Core i5 12600K\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', '1250.0000'),
-(2, 1, 1, 1, 'PC #1', 2, '1200.0000', '[]', 'null', '2400.0000'),
+(1, 1, 1, 2, 'Personal Computer #2', 1, '1250.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"14\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"8GB\"},\"2\":{\"name\":\"8GB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"22\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"1TB\"},\"2\":{\"name\":\"1TB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"18\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i5 12600K\"},\"1\":{\"name\":\"Intel Core i5 12600K\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', '1250.0000'),
+(2, 1, 1, 1, 'Personal Computer #1', 2, '1200.0000', '[]', 'null', '2400.0000'),
 (3, 1, 2, 3, 'Shirt #1', 3, '67.0000', '[{\"option_id\":\"6\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"6\",\"option_value_id\":\"29\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Green\"},\"2\":{\"name\":\"Hijau\"}},\"sort_order\":\"6\",\"status\":\"1\"}},{\"option_id\":\"7\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Size\"},\"2\":{\"name\":\"Ukuran\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"7\",\"option_value_id\":\"31\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Medium\"},\"2\":{\"name\":\"Sedang\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"6\":\"29\",\"7\":\"31\"}', '201.0000');
 
 --
@@ -641,10 +641,10 @@ TRUNCATE TABLE `product_description`;
 --
 
 INSERT INTO `product_description` (`product_description_id`, `product_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keywords`, `slug`) VALUES
-(1, 1, 1, 'PC #1', '<p>The description of PC #1.</p>', 'PC #1', 'The description of PC #1.', 'pc,1', 'pc-1'),
-(2, 1, 2, 'PC #1', '<p>Deskripsi PC #1.</p>', 'PC #1', 'Deskripsi PC #1.', 'pc,1', 'pc-1'),
-(3, 2, 1, 'PC #2', '<p>The description of PC #2.</p>', 'PC #2', 'The description of PC #2.', 'pc,2', 'pc-2'),
-(4, 2, 2, 'PC #2', '<p>Deskripsi PC #2.</p>', 'PC #2', 'Deskripsi PC #2.', 'pc,2', 'pc-2'),
+(1, 1, 1, 'Personal Computer #1', '<p>The description of Personal Computer #1.</p>', 'PC #1', 'The description of PC #1.', 'pc,1', 'personal-computer-1'),
+(2, 1, 2, 'Komputer Pribadi #1', '<p>Deskripsi Komputer Pribadi #1.</p>', 'PC #1', 'Deskripsi PC #1.', 'pc,1', 'komputer-pribadi-1'),
+(3, 2, 1, 'Personal Computer #2', '<p>The description of Personal Computer #2.</p>', 'PC #2', 'The description of PC #2.', 'pc,2', 'personal-computer-2'),
+(4, 2, 2, 'Komputer Pribadi #2', '<p>Deskripsi Komputer Pribadi #2.</p>', 'PC #2', 'Deskripsi PC #2.', 'pc,2', 'komputer-pribadi-2'),
 (5, 3, 1, 'Shirt #1', '<p>The description of Shirt #1.</p>', 'Shirt #1', 'The description of Shirt #1', 'shirt,1', 'shirt-1'),
 (6, 3, 2, 'Kemeja #1', '<p>Deskripsi Kemeja #1.</p>', 'Kemeja #1', 'Deskripsi Kemeja #1', 'kemeja,1', 'kemeja-1');
 
@@ -711,6 +711,96 @@ INSERT INTO `product_option_value` (`product_option_value_id`, `product_option_i
 (17, 6, 3, 7, 30, 2, 2),
 (18, 6, 3, 7, 31, 2, 2),
 (19, 6, 3, 7, 32, 2, 2);
+
+--
+-- Truncate table before insert `product_question`
+--
+
+TRUNCATE TABLE `product_question`;
+--
+-- Dumping data for table `product_question`
+--
+
+INSERT INTO `product_question` (`product_question_id`, `product_id`, `customer_id`, `question`, `date_added`, `status`) VALUES
+(1, 2, 3, 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum?', '2022-10-25 07:31:49', 1),
+(2, 2, 3, 'Aliquet bibendum enim facilisis gravida neque convallis?', '2022-10-28 22:58:58', 1),
+(3, 2, 4, 'Platea dictumst vestibulum rhoncus est pellentesque elit?', '2022-10-30 21:11:25', 1);
+
+--
+-- Truncate table before insert `product_question_answer`
+--
+
+TRUNCATE TABLE `product_question_answer`;
+--
+-- Dumping data for table `product_question_answer`
+--
+
+INSERT INTO `product_question_answer` (`product_question_answer_id`, `product_question_id`, `product_id`, `customer_id`, `seller_id`, `answer`, `date_added`, `status`) VALUES
+(1, 1, 2, 1, 1, 'Pulvinar mattis nunc sed blandit libero volutpat sed. Nisi vitae suscipit tellus mauris a.\r\n\r\nEst ultricies integer quis auctor elit sed. Massa massa ultricies mi quis hendrerit. Molestie nunc non blandit massa enim nec dui nunc. Eget sit amet tellus cras adipiscing enim eu turpis. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Arcu non odio euismod lacinia. Eget aliquet nibh praesent tristique magna. Blandit libero volutpat sed cras. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl.\r\n\r\nDuis tristique sollicitudin nibh sit. Orci a scelerisque purus semper eget duis at tellus at.', '2022-10-26 00:50:29', 1),
+(2, 1, 2, 1, 1, 'Sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis. Nunc pulvinar sapien et ligula ullamcorper malesuada. Scelerisque fermentum dui faucibus in ornare. Nibh venenatis cras sed felis eget velit aliquet sagittis. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Maecenas pharetra convallis posuere morbi leo urna molestie. Vel pharetra vel turpis nunc eget lorem.\r\n\r\nGravida dictum fusce ut placerat orci nulla pellentesque dignissim. Lacus vel facilisis volutpat est velit egestas dui id ornare. Lectus sit amet est placerat.', '2022-10-26 07:28:29', 1),
+(3, 1, 2, 1, 1, 'Nunc lobortis mattis aliquam faucibus purus. Mauris nunc congue nisi vitae. Dui id ornare arcu odio ut sem nulla. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Id leo in vitae turpis massa sed elementum tempus. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Adipiscing tristique risus nec feugiat. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.\r\n\r\nEst pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Sapien eget mi proin sed libero enim sed faucibus.', '2022-10-28 21:20:24', 1),
+(4, 1, 2, 1, 1, 'Massa sed elementum tempus egestas sed. Malesuada proin libero nunc consequat interdum varius sit. Imperdiet nulla malesuada pellentesque elit. Suspendisse ultrices gravida dictum fusce ut. Nunc congue nisi vitae suscipit tellus mauris a diam. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Id neque aliquam vestibulum morbi blandit cursus. Magna eget est lorem ipsum dolor.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada. In fermentum posuere urna nec tincidunt praesent semper. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Purus sit amet luctus venenatis lectus magna fringilla urna. Dictumst vestibulum rhoncus est pellentesque. Non arcu risus quis varius quam quisque id diam. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Eget velit aliquet sagittis id consectetur purus ut. Arcu non odio euismod lacinia at quis risus sed.', '2022-10-28 21:21:56', 1),
+(5, 1, 2, 1, 1, 'Consectetur a erat nam at. Penatibus et magnis dis parturient montes. At volutpat diam ut venenatis tellus in. Malesuada bibendum arcu vitae elementum curabitur vitae. Consequat ac felis donec et. Risus commodo viverra maecenas accumsan lacus vel. Amet volutpat consequat mauris nunc congue nisi vitae suscipit. A pellentesque sit amet porttitor eget dolor morbi non.\r\n\r\nLeo duis ut diam quam nulla porttitor. Condimentum lacinia quis vel eros donec ac. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Massa ultricies mi quis hendrerit dolor magna eget est. Lacinia quis vel eros donec ac odio. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Velit egestas dui id ornare arcu odio ut. Cras fermentum odio eu feugiat pretium. In massa tempor nec feugiat nisl pretium fusce id velit.\r\n\r\nVulputate enim nulla aliquet porttitor. Curabitur gravida arcu ac tortor dignissim convallis aenean et. Sem nulla pharetra diam sit amet nisl suscipit.', '2022-10-28 21:22:22', 1),
+(6, 1, 2, 1, 1, 'Sed cras ornare arcu dui. Dignissim suspendisse in est ante in nibh mauris. Sed viverra tellus in hac habitasse platea. Sed sed risus pretium quam vulputate. Volutpat est velit egestas dui id ornare arcu odio.\r\n\r\nMauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Dignissim sodales ut eu sem. Scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis. Luctus venenatis lectus magna fringilla urna. Sagittis orci a scelerisque purus.\r\n\r\nAliquet bibendum enim facilisis gravida neque convallis. Ac felis donec et odio pellentesque diam volutpat. Fermentum et sollicitudin ac orci. Scelerisque varius morbi enim nunc faucibus a. Vel turpis nunc eget lorem dolor.', '2022-10-28 21:22:51', 1),
+(7, 2, 2, 1, 1, 'Enim praesent elementum facilisis leo vel fringilla est. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Vel pretium lectus quam id leo in vitae turpis massa. Quisque egestas diam in arcu cursus euismod.', '2022-10-28 22:59:49', 1),
+(8, 1, 2, 2, 2, 'Ac felis donec et odio pellentesque diam volutpat. Fermentum et sollicitudin ac orci. Scelerisque varius morbi enim nunc faucibus a. Vel turpis nunc eget lorem dolor.', '2022-10-30 07:03:28', 1),
+(9, 1, 2, 2, 2, 'Nibh venenatis cras sed felis eget velit aliquet sagittis. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Maecenas pharetra convallis posuere morbi leo urna molestie.', '2022-10-30 07:07:53', 1),
+(10, 1, 2, 3, 0, 'Lacinia quis vel eros donec ac odio. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Velit egestas dui id ornare arcu odio ut. Cras fermentum odio eu feugiat pretium. In massa tempor nec feugiat nisl pretium fusce id velit.', '2022-10-30 07:08:23', 1),
+(11, 1, 2, 1, 1, 'Purus sit amet luctus venenatis lectus magna fringilla urna. Dictumst vestibulum rhoncus est pellentesque. Non arcu risus quis varius quam quisque id diam.', '2022-10-30 07:08:51', 1),
+(12, 3, 2, 1, 1, 'In hac habitasse platea dictumst vestibulum rhoncus. Vivamus at augue eget arcu dictum varius. Nibh cras pulvinar mattis nunc.', '2022-10-30 21:12:13', 1);
+
+--
+-- Truncate table before insert `product_question_answer_vote`
+--
+
+TRUNCATE TABLE `product_question_answer_vote`;
+--
+-- Dumping data for table `product_question_answer_vote`
+--
+
+INSERT INTO `product_question_answer_vote` (`product_question_answer_vote_id`, `product_question_answer_id`, `customer_id`, `vote`, `date_added`) VALUES
+(37, 11, 1, 0, '2022-10-30 10:18:58'),
+(35, 10, 1, 1, '2022-10-30 10:18:55'),
+(34, 9, 1, 1, '2022-10-30 10:18:54'),
+(33, 8, 1, 1, '2022-10-30 10:18:50'),
+(38, 11, 3, 1, '2022-10-30 10:19:27'),
+(39, 10, 3, 0, '2022-10-30 10:19:30'),
+(40, 9, 3, 1, '2022-10-30 10:19:32'),
+(41, 8, 3, 1, '2022-10-30 10:19:35'),
+(45, 9, 4, 1, '2022-10-30 12:16:09'),
+(55, 10, 4, 0, '2022-10-30 12:36:55'),
+(56, 6, 3, 0, '2022-10-30 21:37:31'),
+(57, 5, 3, 1, '2022-10-30 21:42:02'),
+(58, 5, 1, 1, '2022-10-30 21:42:27'),
+(59, 5, 2, 0, '2022-10-30 21:42:46'),
+(60, 5, 4, 0, '2022-10-30 21:43:03');
+
+--
+-- Truncate table before insert `product_question_vote`
+--
+
+TRUNCATE TABLE `product_question_vote`;
+--
+-- Dumping data for table `product_question_vote`
+--
+
+INSERT INTO `product_question_vote` (`product_question_vote_id`, `product_question_id`, `customer_id`, `vote`, `date_added`, `date_modified`) VALUES
+(37, 1, 4, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(44, 1, 2, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(47, 3, 2, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+--
+-- Truncate table before insert `product_review`
+--
+
+TRUNCATE TABLE `product_review`;
+--
+-- Dumping data for table `product_review`
+--
+
+INSERT INTO `product_review` (`product_review_id`, `order_product_id`, `order_id`, `product_id`, `seller_id`, `customer_id`, `rating`, `title`, `review`, `date_added`, `date_modified`, `status`) VALUES
+(1, 1, 1, 2, 1, 3, 3, 'Duis aute irure dolor in reprehenderit in voluptate', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2022-10-23 00:42:44', '2022-10-23 03:03:13', 1),
+(2, 4, 2, 2, 1, 2, 5, 'Enim ut tellus elementum sagittis vitae et leo duis.', 'Volutpat maecenas volutpat blandit aliquam etiam. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Ultrices sagittis orci a scelerisque purus semper eget duis at. Odio euismod lacinia at quis risus sed vulputate. Risus quis varius quam quisque id diam vel quam.', '2022-10-23 06:11:28', '2022-10-23 06:11:28', 1);
 
 --
 -- Truncate table before insert `product_to_category`
@@ -812,7 +902,7 @@ TRUNCATE TABLE `product_variant_option_value`;
 
 TRUNCATE TABLE `seller`;
 --
--- Dumping data untuk tabel `seller`
+-- Dumping data for table `seller`
 --
 
 INSERT INTO `seller` (`seller_id`, `customer_id`, `store_name`, `store_description`, `slug`, `logo`, `cover`, `date_added`, `date_modified`, `status`) VALUES
@@ -830,7 +920,7 @@ TRUNCATE TABLE `seller_geo_zone`;
 
 TRUNCATE TABLE `seller_shipping_method`;
 --
--- Dumping data untuk tabel `seller_shipping_method`
+-- Dumping data for table `seller_shipping_method`
 --
 
 INSERT INTO `seller_shipping_method` (`seller_shipping_method_id`, `seller_id`, `code`, `rate`, `serialized`, `status`) VALUES
@@ -1035,6 +1125,20 @@ TRUNCATE TABLE `widget_install`;
 INSERT INTO `widget_install` (`widget_install_id`, `location`, `author`, `widget`) VALUES
 (1, 'marketplace', 'com_openmvm', 'Page'),
 (2, 'marketplace', 'com_openmvm', 'Category');
+
+--
+-- Truncate table before insert `wishlist`
+--
+
+TRUNCATE TABLE `wishlist`;
+--
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`wishlist_id`, `key`, `customer_id`, `product_id`, `date_added`, `date_modified`) VALUES
+(12, '1c631fae7179d50ad8b94c791863eb98015f79a7', 4, 2, '2022-10-15 07:37:40', '2022-10-15 07:43:47'),
+(22, '1c631fae7179d50ad8b94c791863eb98015f79a7', 4, 3, '2022-10-15 07:44:50', '2022-10-15 07:44:50'),
+(24, '1c631fae7179d50ad8b94c791863eb98015f79a7', 3, 2, '2022-10-23 00:45:58', '2022-10-23 00:45:58');
 
 --
 -- Truncate table before insert `zone`
