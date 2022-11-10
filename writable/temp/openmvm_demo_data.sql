@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 07:23 AM
+-- Generation Time: Nov 10, 2022 at 11:16 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -31,7 +31,7 @@ TRUNCATE TABLE `administrator_group`;
 --
 
 INSERT INTO `administrator_group` (`administrator_group_id`, `name`, `permission`) VALUES
-(1, 'Administrator', '{\"access\":[\"Administrator\\/Administrator\",\"Administrator\\/Administrator_Group\",\"Appearance\\/Admin\\/Theme\",\"Appearance\\/Marketplace\\/Layout\",\"Appearance\\/Marketplace\\/Theme\",\"Appearance\\/Marketplace\\/Widget\",\"Appearance\\/Marketplace\\/Widgets\\/Category\",\"Appearance\\/Marketplace\\/Widgets\\/HTML_Content\",\"Appearance\\/Marketplace\\/Widgets\\/Link\",\"Appearance\\/Marketplace\\/Widgets\\/Page\",\"Component\\/Analytics\\/Google_Analytics_4\",\"Component\\/Component\\/Analytics\",\"Component\\/Component\\/Order_Total\",\"Component\\/Component\\/Payment_Method\",\"Component\\/Component\\/Shipping_Method\",\"Component\\/Order_Total\\/Shipping\",\"Component\\/Order_Total\\/Sub_Total\",\"Component\\/Order_Total\\/Total\",\"Component\\/Payment_Method\\/Bank_Transfer\",\"Component\\/Payment_Method\\/Cash_On_Delivery\",\"Component\\/Shipping_Method\\/Flat_Rate\",\"Component\\/Shipping_Method\\/Weight_Based\",\"Component\\/Shipping_Method\\/Zone_Based\",\"Customer\\/Customer\",\"Customer\\/Customer_Group\",\"Developer\\/Demo_Manager\",\"Developer\\/Language_Editor\",\"File_Manager\\/Image_Manager\",\"Localisation\\/Country\",\"Localisation\\/Currency\",\"Localisation\\/Geo_Zone\",\"Localisation\\/Language\",\"Localisation\\/Length_Class\",\"Localisation\\/Order_Status\",\"Localisation\\/Weight_Class\",\"Localisation\\/Zone\",\"Marketplace\\/Category\",\"Page\\/Page\",\"Plugin\\/Plugin\",\"System\\/Error_Log\",\"System\\/Performance\",\"System\\/Setting\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Appearance\\/Marketplace\\/Widgets\\/Blank\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Plugin\\/Plugin\"],\"modify\":[\"Administrator\\/Administrator\",\"Administrator\\/Administrator_Group\",\"Appearance\\/Admin\\/Theme\",\"Appearance\\/Marketplace\\/Layout\",\"Appearance\\/Marketplace\\/Theme\",\"Appearance\\/Marketplace\\/Widget\",\"Appearance\\/Marketplace\\/Widgets\\/Category\",\"Appearance\\/Marketplace\\/Widgets\\/HTML_Content\",\"Appearance\\/Marketplace\\/Widgets\\/Link\",\"Appearance\\/Marketplace\\/Widgets\\/Page\",\"Component\\/Analytics\\/Google_Analytics_4\",\"Component\\/Component\\/Analytics\",\"Component\\/Component\\/Order_Total\",\"Component\\/Component\\/Payment_Method\",\"Component\\/Component\\/Shipping_Method\",\"Component\\/Order_Total\\/Shipping\",\"Component\\/Order_Total\\/Sub_Total\",\"Component\\/Order_Total\\/Total\",\"Component\\/Payment_Method\\/Bank_Transfer\",\"Component\\/Payment_Method\\/Cash_On_Delivery\",\"Component\\/Shipping_Method\\/Flat_Rate\",\"Component\\/Shipping_Method\\/Weight_Based\",\"Component\\/Shipping_Method\\/Zone_Based\",\"Customer\\/Customer\",\"Customer\\/Customer_Group\",\"Developer\\/Demo_Manager\",\"Developer\\/Language_Editor\",\"File_Manager\\/Image_Manager\",\"Localisation\\/Country\",\"Localisation\\/Currency\",\"Localisation\\/Geo_Zone\",\"Localisation\\/Language\",\"Localisation\\/Length_Class\",\"Localisation\\/Order_Status\",\"Localisation\\/Weight_Class\",\"Localisation\\/Zone\",\"Marketplace\\/Category\",\"Page\\/Page\",\"Plugin\\/Plugin\",\"System\\/Error_Log\",\"System\\/Performance\",\"System\\/Setting\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Appearance\\/Marketplace\\/Widgets\\/Blank\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Plugin\\/Plugin\"]}'),
+(1, 'Administrator', '{\"access\":[\"Administrator\\/Administrator\",\"Administrator\\/Administrator_Group\",\"Appearance\\/Admin\\/Theme\",\"Appearance\\/Marketplace\\/Layout\",\"Appearance\\/Marketplace\\/Theme\",\"Appearance\\/Marketplace\\/Widget\",\"Appearance\\/Marketplace\\/Widgets\\/Category\",\"Appearance\\/Marketplace\\/Widgets\\/HTML_Content\",\"Appearance\\/Marketplace\\/Widgets\\/Link\",\"Appearance\\/Marketplace\\/Widgets\\/Page\",\"Component\\/Analytics\\/Google_Analytics_4\",\"Component\\/Component\\/Analytics\",\"Component\\/Component\\/Order_Total\",\"Component\\/Component\\/Payment_Method\",\"Component\\/Component\\/Shipping_Method\",\"Component\\/Order_Total\\/Shipping\",\"Component\\/Order_Total\\/Sub_Total\",\"Component\\/Order_Total\\/Total\",\"Component\\/Payment_Method\\/Bank_Transfer\",\"Component\\/Payment_Method\\/Cash_On_Delivery\",\"Component\\/Shipping_Method\\/Flat_Rate\",\"Component\\/Shipping_Method\\/Weight_Based\",\"Component\\/Shipping_Method\\/Zone_Based\",\"Customer\\/Customer\",\"Customer\\/Customer_Group\",\"Developer\\/Demo_Manager\",\"Developer\\/Language_Editor\",\"File_Manager\\/Image_Manager\",\"Localisation\\/Country\",\"Localisation\\/Currency\",\"Localisation\\/Geo_Zone\",\"Localisation\\/Language\",\"Localisation\\/Length_Class\",\"Localisation\\/Order_Status\",\"Localisation\\/Weight_Class\",\"Localisation\\/Zone\",\"Marketplace\\/Category\",\"Marketplace\\/Order\",\"Page\\/Page\",\"Plugin\\/Plugin\",\"System\\/Error_Log\",\"System\\/Performance\",\"System\\/Setting\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Appearance\\/Marketplace\\/Widgets\\/Blank\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Plugin\\/Plugin\"],\"modify\":[\"Administrator\\/Administrator\",\"Administrator\\/Administrator_Group\",\"Appearance\\/Admin\\/Theme\",\"Appearance\\/Marketplace\\/Layout\",\"Appearance\\/Marketplace\\/Theme\",\"Appearance\\/Marketplace\\/Widget\",\"Appearance\\/Marketplace\\/Widgets\\/Category\",\"Appearance\\/Marketplace\\/Widgets\\/HTML_Content\",\"Appearance\\/Marketplace\\/Widgets\\/Link\",\"Appearance\\/Marketplace\\/Widgets\\/Page\",\"Component\\/Analytics\\/Google_Analytics_4\",\"Component\\/Component\\/Analytics\",\"Component\\/Component\\/Order_Total\",\"Component\\/Component\\/Payment_Method\",\"Component\\/Component\\/Shipping_Method\",\"Component\\/Order_Total\\/Shipping\",\"Component\\/Order_Total\\/Sub_Total\",\"Component\\/Order_Total\\/Total\",\"Component\\/Payment_Method\\/Bank_Transfer\",\"Component\\/Payment_Method\\/Cash_On_Delivery\",\"Component\\/Shipping_Method\\/Flat_Rate\",\"Component\\/Shipping_Method\\/Weight_Based\",\"Component\\/Shipping_Method\\/Zone_Based\",\"Customer\\/Customer\",\"Customer\\/Customer_Group\",\"Developer\\/Demo_Manager\",\"Developer\\/Language_Editor\",\"File_Manager\\/Image_Manager\",\"Localisation\\/Country\",\"Localisation\\/Currency\",\"Localisation\\/Geo_Zone\",\"Localisation\\/Language\",\"Localisation\\/Length_Class\",\"Localisation\\/Order_Status\",\"Localisation\\/Weight_Class\",\"Localisation\\/Zone\",\"Marketplace\\/Category\",\"Marketplace\\/Order\",\"Page\\/Page\",\"Plugin\\/Plugin\",\"System\\/Error_Log\",\"System\\/Performance\",\"System\\/Setting\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Appearance\\/Marketplace\\/Widgets\\/Blank\",\"plugins\\/com_bukausahaonline\\/Widget_Blank\\/Controllers\\/Admin\\/Plugin\\/Plugin\"]}'),
 (2, 'Demonstration', '');
 
 --
@@ -476,7 +476,8 @@ TRUNCATE TABLE `order`;
 --
 
 INSERT INTO `order` (`order_id`, `invoice`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `payment_firstname`, `payment_lastname`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_country_id`, `payment_country`, `payment_zone_id`, `payment_zone`, `payment_telephone`, `payment_method_code`, `payment_method_title`, `payment_method_text`, `shipping_firstname`, `shipping_lastname`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_country_id`, `shipping_country`, `shipping_zone_id`, `shipping_zone`, `shipping_telephone`, `total`, `order_status_id`, `currency_id`, `currency_code`, `currency_value`, `date_added`, `date_modified`) VALUES
-(1, 'OPENMVM-INV-2022-0001', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3860.0000', 1, 1, 'USD', '1.00000000', '2022-10-13 08:14:28', '0000-00-00 00:00:00');
+(1, 'OPENMVM-INV-2022-0001', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3860.0000', 1, 1, 'USD', '1.00000000', '2022-10-13 08:14:28', '0000-00-00 00:00:00'),
+(2, 'OPENMVM-INV-2022-0002', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3941.0000', 3, 1, 'USD', '1.00000000', '2022-11-10 04:10:13', '0000-00-00 00:00:00');
 
 --
 -- Truncate table before insert `order_product`
@@ -490,7 +491,10 @@ TRUNCATE TABLE `order_product`;
 INSERT INTO `order_product` (`order_product_id`, `order_id`, `seller_id`, `product_id`, `name`, `quantity`, `price`, `option`, `option_ids`, `total`) VALUES
 (1, 1, 1, 2, 'Personal Computer #2', 1, '1250.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"14\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"8GB\"},\"2\":{\"name\":\"8GB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"22\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"1TB\"},\"2\":{\"name\":\"1TB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"18\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i5 12600K\"},\"1\":{\"name\":\"Intel Core i5 12600K\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', '1250.0000'),
 (2, 1, 1, 1, 'Personal Computer #1', 2, '1200.0000', '[]', 'null', '2400.0000'),
-(3, 1, 2, 3, 'Shirt #1', 3, '67.0000', '[{\"option_id\":\"6\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"6\",\"option_value_id\":\"29\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Green\"},\"2\":{\"name\":\"Hijau\"}},\"sort_order\":\"6\",\"status\":\"1\"}},{\"option_id\":\"7\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Size\"},\"2\":{\"name\":\"Ukuran\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"7\",\"option_value_id\":\"31\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Medium\"},\"2\":{\"name\":\"Sedang\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"6\":\"29\",\"7\":\"31\"}', '201.0000');
+(3, 1, 2, 3, 'Shirt #1', 3, '67.0000', '[{\"option_id\":\"6\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"6\",\"option_value_id\":\"29\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Green\"},\"2\":{\"name\":\"Hijau\"}},\"sort_order\":\"6\",\"status\":\"1\"}},{\"option_id\":\"7\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Size\"},\"2\":{\"name\":\"Ukuran\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"7\",\"option_value_id\":\"31\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Medium\"},\"2\":{\"name\":\"Sedang\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"6\":\"29\",\"7\":\"31\"}', '201.0000'),
+(4, 2, 1, 1, 'Personal Computer #1', 2, '1200.0000', '[]', 'null', '2400.0000'),
+(5, 2, 1, 2, 'Personal Computer #2', 1, '800.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"13\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"4GB\"},\"2\":{\"name\":\"4GB\"}},\"sort_order\":\"1\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"21\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"512GB\"},\"2\":{\"name\":\"512GB\"}},\"sort_order\":\"1\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"17\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i3 12300\"},\"1\":{\"name\":\"Intel Core i3 12300\"}},\"sort_order\":\"1\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', '800.0000'),
+(6, 2, 2, 4, 'Digital Product #1', 3, '245.0000', '[]', 'null', '735.0000');
 
 --
 -- Truncate table before insert `order_shipping`
@@ -503,7 +507,8 @@ TRUNCATE TABLE `order_shipping`;
 
 INSERT INTO `order_shipping` (`order_shipping_id`, `order_id`, `seller_id`, `code`, `text`, `cost`, `tracking_number`) VALUES
 (1, 1, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', ''),
-(2, 1, 2, 'Weight_Based.Weight_Based', 'Weight Based (California, United States) (Weight: 1.20kg)', '3.0000', '');
+(2, 1, 2, 'Weight_Based.Weight_Based', 'Weight Based (California, United States) (Weight: 1.20kg)', '3.0000', ''),
+(3, 2, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', '');
 
 --
 -- Truncate table before insert `order_status`
@@ -567,7 +572,10 @@ INSERT INTO `order_status_history` (`order_status_history_id`, `order_id`, `sell
 (4, 1, 1, 5, '{\"1\":\"<p>Your order has been accepted by the seller.<\\/p>\",\"2\":\"<p>Pesanan anda telah diterima oleh penjual.<\\/p>\"}', 1, '2022-10-13 09:46:35'),
 (5, 1, 1, 6, '{\"2\":\"<p>Pesanan anda telah dikirim. Anda bisa menggunakan nomor resi yang diberikan oleh penjual untuk mengetahui status pengiriman pesanan anda.<\\/p>\",\"1\":\"<p>Your order has been shipped to you. You can use the tracking number gave by the seller to track your order.<\\/p>\"}', 1, '2022-10-13 09:47:07'),
 (6, 1, 1, 7, '{\"1\":\"<p>Your order has been delivered to you.<\\/p>\",\"2\":\"<p>Pesanan sudah anda terima.<\\/p>\"}', 1, '2022-10-13 09:47:20'),
-(7, 1, 1, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-10-13 09:47:50');
+(7, 1, 1, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-10-13 09:47:50'),
+(8, 2, 1, 1, '{\"1\":\"Send your order total amount to this bank account:\\r\\n\\r\\nBank Name: Bank\\r\\nAccount Name: Admin OpenMVM\\r\\nAccount Number: 01234567890\\r\\n\\r\\nWe will process your order after we receive the payment.\",\"2\":\"Silahkan transfer jumlah total pesanan anda ke rekening bank berikit:\\r\\n\\r\\nNama Bank: Bank\\r\\nNama Rekening: Admin OpenMVM\\r\\nNomor Rekening: 01234567890\\r\\n\\r\\nKami akan memproses pesanan anda setelah pembayaran kami terima.\"}', 1, '2022-11-10 04:10:25'),
+(9, 2, 2, 1, '{\"1\":\"Send your order total amount to this bank account:\\r\\n\\r\\nBank Name: Bank\\r\\nAccount Name: Admin OpenMVM\\r\\nAccount Number: 01234567890\\r\\n\\r\\nWe will process your order after we receive the payment.\",\"2\":\"Silahkan transfer jumlah total pesanan anda ke rekening bank berikit:\\r\\n\\r\\nNama Bank: Bank\\r\\nNama Rekening: Admin OpenMVM\\r\\nNomor Rekening: 01234567890\\r\\n\\r\\nKami akan memproses pesanan anda setelah pembayaran kami terima.\"}', 1, '2022-11-10 04:10:25'),
+(10, 2, 2, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-11-10 04:11:20');
 
 --
 -- Truncate table before insert `order_total`
@@ -584,7 +592,12 @@ INSERT INTO `order_total` (`order_total_id`, `order_id`, `seller_id`, `code`, `t
 (3, 1, 1, 'total', 'Total', '3656.0000', 3),
 (4, 1, 2, 'sub_total', 'Sub Total', '201.0000', 1),
 (5, 1, 2, 'shipping', 'Weight Based (California, United States) (Weight: 1.20kg)', '3.0000', 2),
-(6, 1, 2, 'total', 'Total', '204.0000', 3);
+(6, 1, 2, 'total', 'Total', '204.0000', 3),
+(7, 2, 1, 'sub_total', 'Sub Total', '3200.0000', 1),
+(8, 2, 1, 'shipping', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', 2),
+(9, 2, 1, 'total', 'Total', '3206.0000', 3),
+(10, 2, 2, 'sub_total', 'Sub Total', '735.0000', 1),
+(11, 2, 2, 'total', 'Total', '735.0000', 3);
 
 --
 -- Truncate table before insert `page`
@@ -626,10 +639,11 @@ TRUNCATE TABLE `product`;
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `seller_id`, `customer_id`, `category_id_path`, `product_option`, `price`, `quantity`, `weight`, `weight_class_id`, `main_image`, `sku`, `date_added`, `date_modified`, `status`) VALUES
-(1, 1, 1, '1', 0, '1200.00000000', 100, '5.00000000', 1, 'marketplace/customers/1/1665623263_b9cad19b258887026d24.png', 'JHN-0001', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(2, 1, 1, '1', 1, '0.00000000', 0, '0.00000000', 2, 'marketplace/customers/1/1665623714_bd6c1c58bfb3e5893864.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(3, 2, 2, '2', 1, '0.00000000', 0, '0.00000000', 2, 'marketplace/customers/2/1665665145_4bd3b51b80141778f3a5.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1);
+INSERT INTO `product` (`product_id`, `seller_id`, `customer_id`, `category_id_path`, `product_option`, `price`, `quantity`, `requires_shipping`, `weight`, `weight_class_id`, `main_image`, `sku`, `date_added`, `date_modified`, `status`) VALUES
+(1, 1, 1, '1', 0, '1200.00000000', 100, 1, '5.00000000', 1, 'marketplace/customers/1/1665623263_b9cad19b258887026d24.png', 'JHN-0001', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(2, 1, 1, '1', 1, '0.00000000', 0, 1, '0.00000000', 2, 'marketplace/customers/1/1665623714_bd6c1c58bfb3e5893864.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(3, 2, 2, '2', 1, '0.00000000', 0, 1, '0.00000000', 2, 'marketplace/customers/2/1665665145_4bd3b51b80141778f3a5.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(4, 2, 2, '7', 0, '245.00000000', 1000, 0, '0.00000000', 2, 'marketplace/customers/2/1668070131_6fc4f3422155b8b5891d.png', 'JANE-DP-0001', '2022-11-10 02:51:33', '2022-11-10 02:51:33', 1);
 
 --
 -- Truncate table before insert `product_description`
@@ -646,7 +660,34 @@ INSERT INTO `product_description` (`product_description_id`, `product_id`, `lang
 (3, 2, 1, 'Personal Computer #2', '<p>The description of Personal Computer #2.</p>', 'PC #2', 'The description of PC #2.', 'pc,2', 'personal-computer-2'),
 (4, 2, 2, 'Komputer Pribadi #2', '<p>Deskripsi Komputer Pribadi #2.</p>', 'PC #2', 'Deskripsi PC #2.', 'pc,2', 'komputer-pribadi-2'),
 (5, 3, 1, 'Shirt #1', '<p>The description of Shirt #1.</p>', 'Shirt #1', 'The description of Shirt #1', 'shirt,1', 'shirt-1'),
-(6, 3, 2, 'Kemeja #1', '<p>Deskripsi Kemeja #1.</p>', 'Kemeja #1', 'Deskripsi Kemeja #1', 'kemeja,1', 'kemeja-1');
+(6, 3, 2, 'Kemeja #1', '<p>Deskripsi Kemeja #1.</p>', 'Kemeja #1', 'Deskripsi Kemeja #1', 'kemeja,1', 'kemeja-1'),
+(7, 4, 1, 'Digital Product #1', '<p>Description of Digital Product #1</p>', 'Digital Product #1', 'Description of Digital Product #1', 'digital,product,1', 'digital-product-1'),
+(8, 4, 2, 'Produk Digital #1', '<p>Deskripsi Produk Digital #1</p>', 'Produk Digital #1', 'Deskripsi Produk Digital #1', 'produk,digital,1', 'produk-digital-1');
+
+--
+-- Truncate table before insert `product_download`
+--
+
+TRUNCATE TABLE `product_download`;
+--
+-- Dumping data for table `product_download`
+--
+
+INSERT INTO `product_download` (`product_download_id`, `product_id`, `customer_id`, `seller_id`, `filename`, `mask`, `date_added`) VALUES
+(1, 4, 2, 2, 'digital-product-1.txt', '1668070230_fa3e04d8530a520aa5fd.txt', '2022-11-10 02:51:34');
+
+--
+-- Truncate table before insert `product_download_description`
+--
+
+TRUNCATE TABLE `product_download_description`;
+--
+-- Dumping data for table `product_download_description`
+--
+
+INSERT INTO `product_download_description` (`product_download_description_id`, `product_download_id`, `product_id`, `seller_id`, `customer_id`, `language_id`, `name`) VALUES
+(1, 1, 4, 2, 2, 1, 'Example of Digital Product #1'),
+(2, 1, 4, 2, 2, 2, 'Contoh Produk Digital #1');
 
 --
 -- Truncate table before insert `product_image`
@@ -663,7 +704,10 @@ INSERT INTO `product_image` (`product_image_id`, `product_id`, `seller_id`, `cus
 (3, 2, 1, 1, 'marketplace/customers/1/1665623720_1f4a9839aa1791482680.png'),
 (4, 2, 1, 1, 'marketplace/customers/1/1665623724_7954386db58e34c2dc5b.png'),
 (5, 3, 2, 2, 'marketplace/customers/2/1665665146_4840c749b722122e1677.png'),
-(6, 3, 2, 2, 'marketplace/customers/2/1665665153_6b51126550c25a042c03.png');
+(6, 3, 2, 2, 'marketplace/customers/2/1665665153_6b51126550c25a042c03.png'),
+(7, 4, 2, 2, 'marketplace/customers/2/1668070142_47c3948652e0ed46250a.png'),
+(8, 4, 2, 2, 'marketplace/customers/2/1668070146_592aad36cd246e736fa0.png'),
+(9, 4, 2, 2, 'marketplace/customers/2/1668070150_6f252b3c612ebe2d8faf.png');
 
 --
 -- Truncate table before insert `product_option`
@@ -814,7 +858,8 @@ TRUNCATE TABLE `product_to_category`;
 INSERT INTO `product_to_category` (`product_id`, `category_id`) VALUES
 (1, 1),
 (2, 1),
-(3, 2);
+(3, 2),
+(4, 7);
 
 --
 -- Truncate table before insert `product_variant`
@@ -1138,7 +1183,7 @@ TRUNCATE TABLE `wishlist`;
 INSERT INTO `wishlist` (`wishlist_id`, `key`, `customer_id`, `product_id`, `date_added`, `date_modified`) VALUES
 (12, '1c631fae7179d50ad8b94c791863eb98015f79a7', 4, 2, '2022-10-15 07:37:40', '2022-10-15 07:43:47'),
 (22, '1c631fae7179d50ad8b94c791863eb98015f79a7', 4, 3, '2022-10-15 07:44:50', '2022-10-15 07:44:50'),
-(24, '1c631fae7179d50ad8b94c791863eb98015f79a7', 3, 2, '2022-10-23 00:45:58', '2022-10-23 00:45:58');
+(24, 'cc4d1ca4b3a31f066072ad7b45f2ef6f1002ba97', 3, 2, '2022-10-23 00:45:58', '2022-10-23 00:45:58');
 
 --
 -- Truncate table before insert `zone`
