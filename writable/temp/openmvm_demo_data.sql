@@ -861,20 +861,6 @@ INSERT INTO `product_review` (`product_review_id`, `order_product_id`, `order_id
 (2, 7, 2, 2, 1, 2, 5, 'Enim ut tellus elementum sagittis vitae et leo duis.', 'Volutpat maecenas volutpat blandit aliquam etiam. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Ultrices sagittis orci a scelerisque purus semper eget duis at. Odio euismod lacinia at quis risus sed vulputate. Risus quis varius quam quisque id diam vel quam.', '2022-10-23 06:11:28', '2022-10-23 06:11:28', 1);
 
 --
--- Truncate table before insert `product_special`
---
-
-TRUNCATE TABLE `product_special`;
---
--- Dumping data for table `product_special`
---
-
-INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_id`, `seller_id`, `priority`, `price`, `date_start`, `date_end`, `timezone`) VALUES
-(11, 1, 1, 1, 3, '1190.00000000', '2022-11-21 00:00:00', '2022-11-26 00:00:00', 'Asia/Jakarta'),
-(10, 1, 1, 1, 2, '1175.00000000', '2022-11-17 01:24:00', '2022-11-21 13:45:00', 'Asia/Jakarta'),
-(9, 1, 1, 1, 1, '1150.00000000', '2022-11-12 00:00:00', '2022-11-17 00:00:00', 'Asia/Jakarta');
-
---
 -- Truncate table before insert `product_to_category`
 --
 
