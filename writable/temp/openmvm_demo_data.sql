@@ -173,11 +173,11 @@ TRUNCATE TABLE `customer`;
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`customer_id`, `customer_group_id`, `username`, `firstname`, `lastname`, `telephone`, `email`, `password`, `status`, `date_added`, `date_modified`) VALUES
-(1, 1, 'johndoe', 'John', 'Doe', '081234567890', 'john.doe@example.com', '$2y$10$tWqtBLli6roribO5jd2qnOWazcaXuGqLFLH84Wko9SnN.zWmyc2om', 1, '2022-04-12 02:05:19', '2022-10-04 00:02:18'),
-(2, 1, 'janedoe', 'Jane', 'Doe', '', 'jane.doe@example.com', '$2y$10$7AVP2ij9cHQSkzyG2C1v6eAM31VL75txnSnyMQQtGLfR9ViMWP7FC', 1, '2022-04-12 02:05:19', '2022-04-12 02:05:19'),
-(3, 1, 'jackdoe', 'Jack', 'Doe', '', 'jack.doe@example.com', '$2y$10$fXNWlVBs0wQKNnL520QjueaHawhLcbPzRyFpWD04nPBR.Wd56yU/i', 1, '2022-04-12 02:05:19', '2022-04-12 02:05:19'),
-(4, 1, 'jadedoe', 'Jade', 'Doe', '', 'jade.doe@example.com', '$2y$10$U3kOHet/yl0kOUOS46cg1uBhM117DqP0zt9jKZRW2fUY8.A.gOSte', 1, '2022-04-12 02:05:19', '2022-04-12 02:05:19');
+INSERT INTO `customer` (`customer_id`, `customer_group_id`, `username`, `firstname`, `lastname`, `telephone`, `email`, `password`, `timezone`, `date_added`, `date_modified`, `status`) VALUES
+(1, 1, 'johndoe', 'John', 'Doe', '081234567890', 'john.doe@example.com', '$2y$10$tWqtBLli6roribO5jd2qnOWazcaXuGqLFLH84Wko9SnN.zWmyc2om', '', '2022-04-12 02:05:19', '2022-10-04 00:02:18', 1),
+(2, 1, 'janedoe', 'Jane', 'Doe', '', 'jane.doe@example.com', '$2y$10$7AVP2ij9cHQSkzyG2C1v6eAM31VL75txnSnyMQQtGLfR9ViMWP7FC', '', '2022-04-12 02:05:19', '2022-04-12 02:05:19', 1),
+(3, 1, 'jackdoe', 'Jack', 'Doe', '', 'jack.doe@example.com', '$2y$10$fXNWlVBs0wQKNnL520QjueaHawhLcbPzRyFpWD04nPBR.Wd56yU/i', '', '2022-04-12 02:05:19', '2022-04-12 02:05:19', 1),
+(4, 1, 'jadedoe', 'Jade', 'Doe', '', 'jade.doe@example.com', '$2y$10$U3kOHet/yl0kOUOS46cg1uBhM117DqP0zt9jKZRW2fUY8.A.gOSte', '', '2022-04-12 02:05:19', '2022-04-12 02:05:19', 1);
 
 --
 -- Truncate table before insert `customer_address`
@@ -190,7 +190,8 @@ TRUNCATE TABLE `customer_address`;
 
 INSERT INTO `customer_address` (`customer_address_id`, `customer_id`, `firstname`, `lastname`, `address_1`, `address_2`, `city`, `country_id`, `zone_id`, `telephone`) VALUES
 (1, 3, 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 5, '081234567890'),
-(2, 4, 'Jade', 'Doe', 'Test Address', '', 'Test City', 6, 6, '081234567890');
+(2, 4, 'Jade', 'Doe', 'Test Address', '', 'Test City', 6, 6, '081234567890'),
+(3, 2, 'Jane', 'Doe', 'Test Address', '', 'Test City', 6, 5, '081234567890');
 
 --
 -- Truncate table before insert `customer_group`
@@ -477,7 +478,8 @@ TRUNCATE TABLE `order`;
 
 INSERT INTO `order` (`order_id`, `invoice`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `payment_firstname`, `payment_lastname`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_country_id`, `payment_country`, `payment_zone_id`, `payment_zone`, `payment_telephone`, `payment_method_code`, `payment_method_title`, `payment_method_text`, `shipping_firstname`, `shipping_lastname`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_country_id`, `shipping_country`, `shipping_zone_id`, `shipping_zone`, `shipping_telephone`, `total`, `order_status_id`, `currency_id`, `currency_code`, `currency_value`, `date_added`, `date_modified`) VALUES
 (1, 'OPENMVM-INV-2022-0001', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3860.0000', 1, 1, 'USD', '1.00000000', '2022-10-13 08:14:28', '0000-00-00 00:00:00'),
-(2, 'OPENMVM-INV-2022-0002', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3941.0000', 3, 1, 'USD', '1.00000000', '2022-11-10 04:10:13', '0000-00-00 00:00:00');
+(2, 'OPENMVM-INV-2022-0002', 3, 1, 'Jack', 'Doe', 'jack.doe@example.com', '', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jack', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '3941.0000', 3, 1, 'USD', '1.00000000', '2022-11-10 04:10:13', '0000-00-00 00:00:00'),
+(3, 'OPENMVM-INV-2022-0003', 2, 1, 'Jane', 'Doe', 'jane.doe@example.com', '', 'Jane', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', 'Bank_Transfer', 'Bank Transfer', 'Send your order total amount to this bank account:<br />\r\n<br />\r\nBank Name: Bank<br />\r\nAccount Name: Admin OpenMVM<br />\r\nAccount Number: 01234567890<br />\r\n<br />\r\nWe will process your order after we receive the payment.', 'Jane', 'Doe', 'Test Address', '', 'Test City', 6, 'United States', 5, 'California', '081234567890', '5936.0000', 3, 1, 'USD', '1.00000000', '2022-11-14 19:09:42', '0000-00-00 00:00:00');
 
 --
 -- Truncate table before insert `order_product`
@@ -494,7 +496,10 @@ INSERT INTO `order_product` (`order_product_id`, `order_id`, `seller_id`, `produ
 (3, 1, 2, 3, 'Shirt #1', 3, '67.0000', '[{\"option_id\":\"6\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"6\",\"option_value_id\":\"29\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Green\"},\"2\":{\"name\":\"Hijau\"}},\"sort_order\":\"6\",\"status\":\"1\"}},{\"option_id\":\"7\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Size\"},\"2\":{\"name\":\"Ukuran\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"7\",\"option_value_id\":\"31\",\"seller_id\":\"2\",\"customer_id\":\"2\",\"description\":{\"1\":{\"name\":\"Medium\"},\"2\":{\"name\":\"Sedang\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"6\":\"29\",\"7\":\"31\"}', '201.0000'),
 (4, 2, 1, 1, 'Personal Computer #1', 2, '1200.0000', '[]', 'null', '2400.0000'),
 (5, 2, 1, 2, 'Personal Computer #2', 1, '800.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"13\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"4GB\"},\"2\":{\"name\":\"4GB\"}},\"sort_order\":\"1\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"21\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"512GB\"},\"2\":{\"name\":\"512GB\"}},\"sort_order\":\"1\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"17\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i3 12300\"},\"1\":{\"name\":\"Intel Core i3 12300\"}},\"sort_order\":\"1\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', '800.0000'),
-(6, 2, 2, 4, 'Digital Product #1', 3, '245.0000', '[]', 'null', '735.0000');
+(6, 2, 2, 4, 'Digital Product #1', 3, '245.0000', '[]', 'null', '735.0000'),
+(7, 3, 1, 2, 'Personal Computer #2', 1, '1030.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"14\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"8GB\"},\"2\":{\"name\":\"8GB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"22\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"1TB\"},\"2\":{\"name\":\"1TB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"17\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i3 12300\"},\"1\":{\"name\":\"Intel Core i3 12300\"}},\"sort_order\":\"1\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"14\",\"4\":\"17\",\"5\":\"22\"}', '1030.0000'),
+(8, 3, 1, 2, 'Personal Computer #2', 2, '1250.0000', '[{\"option_id\":\"1\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Warna\"},\"1\":{\"name\":\"Color\"}},\"sort_order\":\"1\",\"status\":\"1\",\"option_value\":{\"option_id\":\"1\",\"option_value_id\":\"11\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Perak\"},\"1\":{\"name\":\"Silver\"}},\"sort_order\":\"5\",\"status\":\"1\"}},{\"option_id\":\"3\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"RAM\"},\"2\":{\"name\":\"RAM\"}},\"sort_order\":\"2\",\"status\":\"1\",\"option_value\":{\"option_id\":\"3\",\"option_value_id\":\"14\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"8GB\"},\"2\":{\"name\":\"8GB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"5\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"Memory\"},\"2\":{\"name\":\"Memory\"}},\"sort_order\":\"3\",\"status\":\"1\",\"option_value\":{\"option_id\":\"5\",\"option_value_id\":\"22\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"1\":{\"name\":\"1TB\"},\"2\":{\"name\":\"1TB\"}},\"sort_order\":\"2\",\"status\":\"1\"}},{\"option_id\":\"4\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Processor\"},\"1\":{\"name\":\"Processor\"}},\"sort_order\":\"4\",\"status\":\"1\",\"option_value\":{\"option_id\":\"4\",\"option_value_id\":\"18\",\"seller_id\":\"1\",\"customer_id\":\"1\",\"description\":{\"2\":{\"name\":\"Intel Core i5 12600K\"},\"1\":{\"name\":\"Intel Core i5 12600K\"}},\"sort_order\":\"2\",\"status\":\"1\"}}]', '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', '2500.0000'),
+(9, 3, 1, 1, 'Personal Computer #1', 2, '1200.0000', '[]', 'null', '2400.0000');
 
 --
 -- Truncate table before insert `order_shipping`
@@ -508,7 +513,8 @@ TRUNCATE TABLE `order_shipping`;
 INSERT INTO `order_shipping` (`order_shipping_id`, `order_id`, `seller_id`, `code`, `text`, `cost`, `tracking_number`) VALUES
 (1, 1, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', ''),
 (2, 1, 2, 'Weight_Based.Weight_Based', 'Weight Based (California, United States) (Weight: 1.20kg)', '3.0000', ''),
-(3, 2, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', '');
+(3, 2, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', ''),
+(4, 3, 1, 'Zone_Based.Zone_Based', 'Zone Based (California, United States) (Weight: 10.02kg)', '6.0000', '0001234567891');
 
 --
 -- Truncate table before insert `order_status`
@@ -575,7 +581,12 @@ INSERT INTO `order_status_history` (`order_status_history_id`, `order_id`, `sell
 (7, 1, 1, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-10-13 09:47:50'),
 (8, 2, 1, 1, '{\"1\":\"Send your order total amount to this bank account:\\r\\n\\r\\nBank Name: Bank\\r\\nAccount Name: Admin OpenMVM\\r\\nAccount Number: 01234567890\\r\\n\\r\\nWe will process your order after we receive the payment.\",\"2\":\"Silahkan transfer jumlah total pesanan anda ke rekening bank berikit:\\r\\n\\r\\nNama Bank: Bank\\r\\nNama Rekening: Admin OpenMVM\\r\\nNomor Rekening: 01234567890\\r\\n\\r\\nKami akan memproses pesanan anda setelah pembayaran kami terima.\"}', 1, '2022-11-10 04:10:25'),
 (9, 2, 2, 1, '{\"1\":\"Send your order total amount to this bank account:\\r\\n\\r\\nBank Name: Bank\\r\\nAccount Name: Admin OpenMVM\\r\\nAccount Number: 01234567890\\r\\n\\r\\nWe will process your order after we receive the payment.\",\"2\":\"Silahkan transfer jumlah total pesanan anda ke rekening bank berikit:\\r\\n\\r\\nNama Bank: Bank\\r\\nNama Rekening: Admin OpenMVM\\r\\nNomor Rekening: 01234567890\\r\\n\\r\\nKami akan memproses pesanan anda setelah pembayaran kami terima.\"}', 1, '2022-11-10 04:10:25'),
-(10, 2, 2, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-11-10 04:11:20');
+(10, 2, 2, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-11-10 04:11:20'),
+(11, 3, 1, 1, '{\"1\":\"Send your order total amount to this bank account:\\r\\n\\r\\nBank Name: Bank\\r\\nAccount Name: Admin OpenMVM\\r\\nAccount Number: 01234567890\\r\\n\\r\\nWe will process your order after we receive the payment.\",\"2\":\"Silahkan transfer jumlah total pesanan anda ke rekening bank berikit:\\r\\n\\r\\nNama Bank: Bank\\r\\nNama Rekening: Admin OpenMVM\\r\\nNomor Rekening: 01234567890\\r\\n\\r\\nKami akan memproses pesanan anda setelah pembayaran kami terima.\"}', 1, '2022-11-14 19:09:49'),
+(12, 3, 1, 5, '{\"1\":\"<p>Your order has been accepted by the seller.<\\/p>\",\"2\":\"<p>Pesanan anda telah diterima oleh penjual.<\\/p>\"}', 1, '2022-11-14 19:11:45'),
+(13, 3, 1, 6, '{\"1\":\"<p>Your order has been shipped to you. You can use the tracking number gave by the seller to track your order.<\\/p>\",\"2\":\"<p>Pesanan anda telah dikirim. Anda bisa menggunakan nomor resi yang diberikan oleh penjual untuk mengetahui status pengiriman pesanan anda.<\\/p>\"}', 1, '2022-11-14 19:12:17'),
+(14, 3, 1, 7, '{\"1\":\"<p>Your order has been delivered to you.<\\/p>\",\"2\":\"<p>Pesanan sudah anda terima.<\\/p>\"}', 1, '2022-11-14 19:14:34'),
+(15, 3, 1, 3, '{\"1\":\"<p>Order completed.<\\/p>\",\"2\":\"<p>Pesanan selesai.<\\/p>\"}', 1, '2022-11-14 19:15:13');
 
 --
 -- Truncate table before insert `order_total`
@@ -597,7 +608,10 @@ INSERT INTO `order_total` (`order_total_id`, `order_id`, `seller_id`, `code`, `t
 (8, 2, 1, 'shipping', 'Zone Based (California, United States) (Weight: 10.01kg)', '6.0000', 2),
 (9, 2, 1, 'total', 'Total', '3206.0000', 3),
 (10, 2, 2, 'sub_total', 'Sub Total', '735.0000', 1),
-(11, 2, 2, 'total', 'Total', '735.0000', 3);
+(11, 2, 2, 'total', 'Total', '735.0000', 3),
+(12, 3, 1, 'sub_total', 'Sub Total', '5930.0000', 1),
+(13, 3, 1, 'shipping', 'Zone Based (California, United States) (Weight: 10.02kg)', '6.0000', 2),
+(14, 3, 1, 'total', 'Total', '5936.0000', 3);
 
 --
 -- Truncate table before insert `page`
@@ -639,11 +653,11 @@ TRUNCATE TABLE `product`;
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `seller_id`, `customer_id`, `category_id_path`, `product_option`, `price`, `quantity`, `requires_shipping`, `weight`, `weight_class_id`, `main_image`, `sku`, `date_added`, `date_modified`, `status`) VALUES
-(1, 1, 1, '1', 0, '1200.00000000', 100, 1, '5.00000000', 1, 'marketplace/customers/1/1665623263_b9cad19b258887026d24.png', 'JHN-0001', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(2, 1, 1, '1', 1, '0.00000000', 0, 1, '0.00000000', 2, 'marketplace/customers/1/1665623714_bd6c1c58bfb3e5893864.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(3, 2, 2, '2', 1, '0.00000000', 0, 1, '0.00000000', 2, 'marketplace/customers/2/1665665145_4bd3b51b80141778f3a5.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(4, 2, 2, '7', 0, '245.00000000', 1000, 0, '0.00000000', 2, 'marketplace/customers/2/1668070131_6fc4f3422155b8b5891d.png', 'JANE-DP-0001', '2022-11-10 02:51:33', '2022-11-10 02:51:33', 1);
+INSERT INTO `product` (`product_id`, `seller_id`, `customer_id`, `category_id_path`, `product_option`, `price`, `quantity`, `minimum_purchase`, `requires_shipping`, `weight`, `weight_class_id`, `main_image`, `sku`, `date_added`, `date_modified`, `status`) VALUES
+(1, 1, 1, '1', 0, '1200.00000000', 100, 1, 1, '5.00000000', 1, 'marketplace/customers/1/1665623263_b9cad19b258887026d24.png', 'JHN-0001', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(2, 1, 1, '1', 1, '0.00000000', 0, 1, 1, '0.00000000', 2, 'marketplace/customers/1/1665623714_bd6c1c58bfb3e5893864.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(3, 2, 2, '2', 1, '0.00000000', 0, 1, 1, '0.00000000', 2, 'marketplace/customers/2/1665665145_4bd3b51b80141778f3a5.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(4, 2, 2, '7', 0, '245.00000000', 1000, 1, 0, '0.00000000', 2, 'marketplace/customers/2/1668070131_6fc4f3422155b8b5891d.png', 'JANE-DP-0001', '2022-11-10 02:51:33', '2022-11-10 02:51:33', 1);
 
 --
 -- Truncate table before insert `product_description`
@@ -844,7 +858,21 @@ TRUNCATE TABLE `product_review`;
 
 INSERT INTO `product_review` (`product_review_id`, `order_product_id`, `order_id`, `product_id`, `seller_id`, `customer_id`, `rating`, `title`, `review`, `date_added`, `date_modified`, `status`) VALUES
 (1, 1, 1, 2, 1, 3, 3, 'Duis aute irure dolor in reprehenderit in voluptate', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2022-10-23 00:42:44', '2022-10-23 03:03:13', 1),
-(2, 4, 2, 2, 1, 2, 5, 'Enim ut tellus elementum sagittis vitae et leo duis.', 'Volutpat maecenas volutpat blandit aliquam etiam. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Ultrices sagittis orci a scelerisque purus semper eget duis at. Odio euismod lacinia at quis risus sed vulputate. Risus quis varius quam quisque id diam vel quam.', '2022-10-23 06:11:28', '2022-10-23 06:11:28', 1);
+(2, 7, 2, 2, 1, 2, 5, 'Enim ut tellus elementum sagittis vitae et leo duis.', 'Volutpat maecenas volutpat blandit aliquam etiam. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Ultrices sagittis orci a scelerisque purus semper eget duis at. Odio euismod lacinia at quis risus sed vulputate. Risus quis varius quam quisque id diam vel quam.', '2022-10-23 06:11:28', '2022-10-23 06:11:28', 1);
+
+--
+-- Truncate table before insert `product_special`
+--
+
+TRUNCATE TABLE `product_special`;
+--
+-- Dumping data for table `product_special`
+--
+
+INSERT INTO `product_special` (`product_special_id`, `product_id`, `customer_id`, `seller_id`, `priority`, `price`, `date_start`, `date_end`, `timezone`) VALUES
+(11, 1, 1, 1, 3, '1190.00000000', '2022-11-21 00:00:00', '2022-11-26 00:00:00', 'Asia/Jakarta'),
+(10, 1, 1, 1, 2, '1175.00000000', '2022-11-17 01:24:00', '2022-11-21 13:45:00', 'Asia/Jakarta'),
+(9, 1, 1, 1, 1, '1150.00000000', '2022-11-12 00:00:00', '2022-11-17 00:00:00', 'Asia/Jakarta');
 
 --
 -- Truncate table before insert `product_to_category`
@@ -870,61 +898,61 @@ TRUNCATE TABLE `product_variant`;
 -- Dumping data for table `product_variant`
 --
 
-INSERT INTO `product_variant` (`product_variant_id`, `product_id`, `seller_id`, `customer_id`, `options`, `sku`, `quantity`, `price`, `weight`, `weight_class_id`) VALUES
-(1, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-001', 100, '800.00000000', '5.00000000', 1),
-(2, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-002', 100, '1020.00000000', '5.00000000', 1),
-(3, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-003', 100, '1240.00000000', '5.00000000', 1),
-(4, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-004', 100, '990.00000000', '5.00000000', 1),
-(5, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-005', 100, '1210.00000000', '5.00000000', 1),
-(6, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-006', 100, '1430.00000000', '5.00000000', 1),
-(7, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-007', 100, '840.00000000', '5.00000000', 1),
-(8, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-008', 100, '1060.00000000', '5.00000000', 1),
-(9, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-009', 100, '1280.00000000', '5.00000000', 1),
-(10, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-010', 100, '1030.00000000', '5.00000000', 1),
-(11, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-011', 100, '1250.00000000', '5.00000000', 1),
-(12, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-012', 100, '1470.00000000', '5.00000000', 1),
-(13, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-013', 100, '890.00000000', '5.00000000', 1),
-(14, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-014', 100, '1110.00000000', '5.00000000', 1),
-(15, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-015', 100, '1330.00000000', '5.00000000', 1),
-(16, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-016', 100, '1080.00000000', '5.00000000', 1),
-(17, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-017', 100, '1300.00000000', '5.00000000', 1),
-(18, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-018', 100, '1520.00000000', '5.00000000', 1),
-(19, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-019', 100, '800.00000000', '5.00000000', 1),
-(20, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-020', 100, '1020.00000000', '5.00000000', 1),
-(21, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-021', 100, '1240.00000000', '5.00000000', 1),
-(22, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-022', 100, '990.00000000', '5.00000000', 1),
-(23, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-023', 100, '1210.00000000', '5.00000000', 1),
-(24, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-024', 100, '1430.00000000', '5.00000000', 1),
-(25, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-025', 100, '840.00000000', '5.00000000', 1),
-(26, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-026', 100, '1060.00000000', '5.00000000', 1),
-(27, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-027', 100, '1280.00000000', '5.00000000', 1),
-(28, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-028', 100, '1030.00000000', '5.00000000', 1),
-(29, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-029', 100, '1250.00000000', '5.00000000', 1),
-(30, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-030', 100, '1470.00000000', '5.00000000', 1),
-(31, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-031', 100, '890.00000000', '5.00000000', 1),
-(32, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-032', 100, '1110.00000000', '5.00000000', 1),
-(33, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-033', 100, '1330.00000000', '5.00000000', 1),
-(34, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-034', 100, '1080.00000000', '5.00000000', 1),
-(35, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-035', 100, '1300.00000000', '5.00000000', 1),
-(36, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-036', 100, '1520.00000000', '5.00000000', 1),
-(37, 3, 2, 2, '{\"6\":\"24\",\"7\":\"30\"}', 'JAN-0001-001', 100, '45.00000000', '300.00000000', 2),
-(38, 3, 2, 2, '{\"6\":\"24\",\"7\":\"31\"}', 'JAN-0001-002', 100, '67.00000000', '400.00000000', 2),
-(39, 3, 2, 2, '{\"6\":\"24\",\"7\":\"32\"}', 'JAN-0001-003', 100, '89.00000000', '500.00000000', 2),
-(40, 3, 2, 2, '{\"6\":\"25\",\"7\":\"30\"}', 'JAN-0001-004', 100, '45.00000000', '300.00000000', 2),
-(41, 3, 2, 2, '{\"6\":\"25\",\"7\":\"31\"}', 'JAN-0001-005', 100, '67.00000000', '400.00000000', 2),
-(42, 3, 2, 2, '{\"6\":\"25\",\"7\":\"32\"}', 'JAN-0001-006', 100, '89.00000000', '500.00000000', 2),
-(43, 3, 2, 2, '{\"6\":\"26\",\"7\":\"30\"}', 'JAN-0001-007', 100, '45.00000000', '300.00000000', 2),
-(44, 3, 2, 2, '{\"6\":\"26\",\"7\":\"31\"}', 'JAN-0001-008', 100, '67.00000000', '400.00000000', 2),
-(45, 3, 2, 2, '{\"6\":\"26\",\"7\":\"32\"}', 'JAN-0001-009', 100, '89.00000000', '500.00000000', 2),
-(46, 3, 2, 2, '{\"6\":\"27\",\"7\":\"30\"}', 'JAN-0001-010', 100, '45.00000000', '300.00000000', 2),
-(47, 3, 2, 2, '{\"6\":\"27\",\"7\":\"31\"}', 'JAN-0001-011', 100, '67.00000000', '400.00000000', 2),
-(48, 3, 2, 2, '{\"6\":\"27\",\"7\":\"32\"}', 'JAN-0001-012', 100, '89.00000000', '500.00000000', 2),
-(49, 3, 2, 2, '{\"6\":\"28\",\"7\":\"30\"}', 'JAN-0001-013', 100, '45.00000000', '300.00000000', 2),
-(50, 3, 2, 2, '{\"6\":\"28\",\"7\":\"31\"}', 'JAN-0001-014', 100, '67.00000000', '400.00000000', 2),
-(51, 3, 2, 2, '{\"6\":\"28\",\"7\":\"32\"}', 'JAN-0001-015', 100, '89.00000000', '500.00000000', 2),
-(52, 3, 2, 2, '{\"6\":\"29\",\"7\":\"30\"}', 'JAN-0001-016', 100, '45.00000000', '300.00000000', 2),
-(53, 3, 2, 2, '{\"6\":\"29\",\"7\":\"31\"}', 'JAN-0001-017', 100, '67.00000000', '400.00000000', 2),
-(54, 3, 2, 2, '{\"6\":\"29\",\"7\":\"32\"}', 'JAN-0001-018', 100, '89.00000000', '500.00000000', 2);
+INSERT INTO `product_variant` (`product_variant_id`, `product_id`, `seller_id`, `customer_id`, `options`, `sku`, `quantity`, `minimum_purchase`, `price`, `weight`, `weight_class_id`) VALUES
+(1, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-001', 100, 1, '800.00000000', '5.00000000', 1),
+(2, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-002', 100, 1, '1020.00000000', '5.00000000', 1),
+(3, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-003', 100, 1, '1240.00000000', '5.00000000', 1),
+(4, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-004', 100, 1, '990.00000000', '5.00000000', 1),
+(5, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-005', 100, 1, '1210.00000000', '5.00000000', 1),
+(6, 2, 1, 1, '{\"1\":\"11\",\"3\":\"13\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-006', 100, 1, '1430.00000000', '5.00000000', 1),
+(7, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-007', 100, 1, '840.00000000', '5.00000000', 1),
+(8, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-008', 100, 1, '1060.00000000', '5.00000000', 1),
+(9, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-009', 100, 1, '1280.00000000', '5.00000000', 1),
+(10, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-010', 100, 1, '1030.00000000', '5.00000000', 1),
+(11, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-011', 100, 1, '1250.00000000', '5.00000000', 1),
+(12, 2, 1, 1, '{\"1\":\"11\",\"3\":\"14\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-012', 100, 1, '1470.00000000', '5.00000000', 1),
+(13, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-013', 100, 1, '890.00000000', '5.00000000', 1),
+(14, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-014', 100, 1, '1110.00000000', '5.00000000', 1),
+(15, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-015', 100, 1, '1330.00000000', '5.00000000', 1),
+(16, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-016', 100, 1, '1080.00000000', '5.00000000', 1),
+(17, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-017', 100, 1, '1300.00000000', '5.00000000', 1),
+(18, 2, 1, 1, '{\"1\":\"11\",\"3\":\"15\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-018', 100, 1, '1520.00000000', '5.00000000', 1),
+(19, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-019', 100, 1, '800.00000000', '5.00000000', 1),
+(20, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-020', 100, 1, '1020.00000000', '5.00000000', 1),
+(21, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-021', 100, 1, '1240.00000000', '5.00000000', 1),
+(22, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-022', 100, 1, '990.00000000', '5.00000000', 1),
+(23, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-023', 100, 1, '1210.00000000', '5.00000000', 1),
+(24, 2, 1, 1, '{\"1\":\"12\",\"3\":\"13\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-024', 100, 1, '1430.00000000', '5.00000000', 1),
+(25, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-025', 100, 1, '840.00000000', '5.00000000', 1),
+(26, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-026', 100, 1, '1060.00000000', '5.00000000', 1),
+(27, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-027', 100, 1, '1280.00000000', '5.00000000', 1),
+(28, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-028', 100, 1, '1030.00000000', '5.00000000', 1),
+(29, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-029', 100, 1, '1250.00000000', '5.00000000', 1),
+(30, 2, 1, 1, '{\"1\":\"12\",\"3\":\"14\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-030', 100, 1, '1470.00000000', '5.00000000', 1),
+(31, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"17\",\"5\":\"21\"}', 'JHN-0002-031', 100, 1, '890.00000000', '5.00000000', 1),
+(32, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"18\",\"5\":\"21\"}', 'JHN-0002-032', 100, 1, '1110.00000000', '5.00000000', 1),
+(33, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"19\",\"5\":\"21\"}', 'JHN-0002-033', 100, 1, '1330.00000000', '5.00000000', 1),
+(34, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"17\",\"5\":\"22\"}', 'JHN-0002-034', 100, 1, '1080.00000000', '5.00000000', 1),
+(35, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"18\",\"5\":\"22\"}', 'JHN-0002-035', 100, 1, '1300.00000000', '5.00000000', 1),
+(36, 2, 1, 1, '{\"1\":\"12\",\"3\":\"15\",\"4\":\"19\",\"5\":\"22\"}', 'JHN-0002-036', 100, 1, '1520.00000000', '5.00000000', 1),
+(37, 3, 2, 2, '{\"6\":\"24\",\"7\":\"30\"}', 'JAN-0001-001', 100, 1, '45.00000000', '300.00000000', 2),
+(38, 3, 2, 2, '{\"6\":\"24\",\"7\":\"31\"}', 'JAN-0001-002', 100, 1, '67.00000000', '400.00000000', 2),
+(39, 3, 2, 2, '{\"6\":\"24\",\"7\":\"32\"}', 'JAN-0001-003', 100, 1, '89.00000000', '500.00000000', 2),
+(40, 3, 2, 2, '{\"6\":\"25\",\"7\":\"30\"}', 'JAN-0001-004', 100, 1, '45.00000000', '300.00000000', 2),
+(41, 3, 2, 2, '{\"6\":\"25\",\"7\":\"31\"}', 'JAN-0001-005', 100, 1, '67.00000000', '400.00000000', 2),
+(42, 3, 2, 2, '{\"6\":\"25\",\"7\":\"32\"}', 'JAN-0001-006', 100, 1, '89.00000000', '500.00000000', 2),
+(43, 3, 2, 2, '{\"6\":\"26\",\"7\":\"30\"}', 'JAN-0001-007', 100, 1, '45.00000000', '300.00000000', 2),
+(44, 3, 2, 2, '{\"6\":\"26\",\"7\":\"31\"}', 'JAN-0001-008', 100, 1, '67.00000000', '400.00000000', 2),
+(45, 3, 2, 2, '{\"6\":\"26\",\"7\":\"32\"}', 'JAN-0001-009', 100, 1, '89.00000000', '500.00000000', 2),
+(46, 3, 2, 2, '{\"6\":\"27\",\"7\":\"30\"}', 'JAN-0001-010', 100, 1, '45.00000000', '300.00000000', 2),
+(47, 3, 2, 2, '{\"6\":\"27\",\"7\":\"31\"}', 'JAN-0001-011', 100, 1, '67.00000000', '400.00000000', 2),
+(48, 3, 2, 2, '{\"6\":\"27\",\"7\":\"32\"}', 'JAN-0001-012', 100, 1, '89.00000000', '500.00000000', 2),
+(49, 3, 2, 2, '{\"6\":\"28\",\"7\":\"30\"}', 'JAN-0001-013', 100, 1, '45.00000000', '300.00000000', 2),
+(50, 3, 2, 2, '{\"6\":\"28\",\"7\":\"31\"}', 'JAN-0001-014', 100, 1, '67.00000000', '400.00000000', 2),
+(51, 3, 2, 2, '{\"6\":\"28\",\"7\":\"32\"}', 'JAN-0001-015', 100, 1, '89.00000000', '500.00000000', 2),
+(52, 3, 2, 2, '{\"6\":\"29\",\"7\":\"30\"}', 'JAN-0001-016', 100, 1, '45.00000000', '300.00000000', 2),
+(53, 3, 2, 2, '{\"6\":\"29\",\"7\":\"31\"}', 'JAN-0001-017', 100, 1, '67.00000000', '400.00000000', 2),
+(54, 3, 2, 2, '{\"6\":\"29\",\"7\":\"32\"}', 'JAN-0001-018', 100, 1, '89.00000000', '500.00000000', 2);
 
 --
 -- Truncate table before insert `product_variant_image`
@@ -950,9 +978,9 @@ TRUNCATE TABLE `seller`;
 -- Dumping data for table `seller`
 --
 
-INSERT INTO `seller` (`seller_id`, `customer_id`, `store_name`, `store_description`, `slug`, `logo`, `cover`, `date_added`, `date_modified`, `status`) VALUES
-(1, 1, 'John Doe Store', 'John Doe Store Description', 'john-doe-store', 'marketplace/customers/1/1664862410_9e1916d8af781fdf0b4d.png', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(2, 2, 'Jane Doe Store', 'Jane Doe Store Description', 'jane-doe-store', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1);
+INSERT INTO `seller` (`seller_id`, `customer_id`, `store_name`, `store_description`, `slug`, `logo`, `cover`, `timezone`, `date_added`, `date_modified`, `status`) VALUES
+(1, 1, 'John Doe Store', 'John Doe Store Description', 'john-doe-store', 'marketplace/customers/1/1664862410_9e1916d8af781fdf0b4d.png', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(2, 2, 'Jane Doe Store', 'Jane Doe Store Description', 'jane-doe-store', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1);
 
 --
 -- Truncate table before insert `seller_geo_zone`
